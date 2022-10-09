@@ -1,0 +1,31 @@
+# Užduoties tikslas: įvertinti kodonų ir dikodonų dažnio skirtumus zinduolių ir bakterijų virusuose.
+# Prisegtuke pateikti po keturis  zinduoliu ("mamalian") ir bakteriju virusai (fasta formatas).
+# Parasykite programa, kuri:  
+
+
+# KLAUSIMAIII
+
+# 1. Reverse complement, cia kai A -> T ir T -> A, nes yra complement ir reverse complement funkcijos atliekancios skirtingus dalykus
+# 2. (Tolimiausio start kodono stop kodonui radimas) ar butinai stop kodono ieskoti tiktai po start kodono, t.y., kai randam stop kodona, ieskot atgal nuo stop kodon?
+# 3. Kiek yra 100 fragmentu? 100 kodonu?? 100 simboliu???
+# 4. (4 uzduotis) visi imanomi kodonai/dikodonai ir jų atitinkamas daznis  - gali buti nemazai nuliu, jei ju sekoje nerasite
+#  <-  visi imanomi kodonai/dikodonai su atitinkamu skaitymo remeliu (reading frame) TIK vienai sekai? Nes paskui 5 uzduoty praso bendrai visom pateiktom sekom?
+# 5. atstumu matrica, ar tiesiog uztenka padaryti lentele (atskira) kodonams ir dikodonams, kur butu seka ir atskiro kodono daznis joje ir tiesiog kaip lentele?
+
+# ATSAKYMAI
+
+# 1. Reverse ir complete abu kartu. 
+# 2. Ne gali būti keli start kodonai vienam stopui
+# 3. 100 simbolių
+# 4. Visoms vieno viruso sekoms
+# 5. Dažnis viruso apimtyje, visoms vieno viruso sekoms
+
+
+
+
+
+# 6. Ar reikia skaiciuojant kodonu/dikodonu daznius visoms pateiktoms sekoms, rezultatus pateikti ir tiesioginei ir reverse sekai?
+# 8. Skaiciuojant kodonu/dekodonu dazni, ar reikia ATSKIRAI skaiciuoti tiesioginei sekos kodonu ir jos reverse komplement kodonu daznius, 
+ar sudeti juos i bendra sarasa ir BENDRAI paskaiciuoti VIENAM VIRUSUI?
+# 9. Ar svarbu, ataskaitos formatas? Pvz, ar galima rasyti su markdown'u ataskaita?
+# 10. Ar reikia paskaiciuoti amino rugsciu dazni? 
