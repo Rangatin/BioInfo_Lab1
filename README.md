@@ -3,8 +3,8 @@
 
 Norint gauti vieno viruso statistiką:
 
-`python one_virus.py <virus_fasta_filename>`
+    python one_virus.py <virus_fasta_filename>
 
 Norint gauti bendrą virusų statistiką:
 
-`python all_viruses.py`
+    python all_viruses.py
