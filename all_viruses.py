@@ -1,5 +1,5 @@
 import pandas as pd
-from utils import read_file
+from utils.utils import read_file
 from virus_parts import get_virus_info, part5, part4
 from scipy.spatial.distance import pdist, squareform
 

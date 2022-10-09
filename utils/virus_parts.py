@@ -1,5 +1,5 @@
 from virus_structure import *
-from utils import *
+from utils.utils import *
 
 
 def part1(virus_sequence, name):

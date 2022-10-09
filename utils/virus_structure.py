@@ -1,4 +1,4 @@
-from utils import get_all_possible_codons, get_all_possible_decodons
+from utils.utils import get_all_possible_codons, get_all_possible_decodons
 
 def get_blueprint():
     frame_blueprint = {

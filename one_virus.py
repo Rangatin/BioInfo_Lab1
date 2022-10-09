@@ -1,4 +1,4 @@
-from utils import *
+from utils.utils import *
 from virus_structure import *
 from virus_parts import *
 import sys
