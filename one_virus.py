@@ -1,6 +1,6 @@
 from utils.utils import *
-from virus_structure import *
-from virus_parts import *
+from utils.virus_structure import *
+from utils.process_virus import *
 import sys
 
 def main():
@@ -12,48 +12,37 @@ def main():
 
     filename = sys.argv[1]
     virus = read_file(filename)
-    # virus_sequence = Seq('AAATTAG')
 
     virus_sequence = virus.seq
     reverse_virus_sequence = reverse_sequence(virus_sequence)
 
-            # j = name[key]['start_stop_p']
-            # print(f'Seka: {straight}; skaitymo remelis: {key}. Start ir stop kodonų poros: {j}\n')
-
-    part1(virus_sequence, seq_frames)
-    print()
-    part1(reverse_virus_sequence, reverse_seq_frames)
-
+    get_frames_start_stop_pairs(virus_sequence, seq_frames, print_results = True)
+    print('\n\n')
+    get_frames_start_stop_pairs(reverse_virus_sequence, reverse_seq_frames, reverse_seq = True, print_results = True)
+    print('\n\n')
 
     """
     3. Atfiltruokite visus fragmentus ("tai butu baltymų koduojancios sekos"), kurie trumpesni nei 100 fragmentų. Ilgesnes nei 100 simboliu
     """
 
-    def filter_long_fragments(frames):
-        for key in frames:
-            long_frag = get_long_fragments(frames[key]['seq'], frames[key]['start_stop_p'])
-            # print(f'Seka: {straight}; skaitymo remelis: {key}. Fragmentai ilgesni nei 100 simboliu: {long_frag}\n') 
-
-
     filter_long_fragments(seq_frames)
-    print('\n')
-    filter_long_fragments(reverse_seq_frames)
-    print('\n')
-
+    print('\n\n')
+    filter_long_fragments(reverse_seq_frames, reverse_seq = True)
+    print('\n\n')
 
     """
     4. Parasykite funkcijas, kurios ivertintu kodonu ir dikodonu daznius
     (visi imanomi kodonai/dikodonai ir jų atitinkamas daznis  - gali buti nemazai nuliu, jei ju sekoje nerasite).
     """
 
-    part2(seq_frames)
-    part2(reverse_seq_frames)
+    get_frames_codon_freq(seq_frames)
+    get_frames_codon_freq(reverse_seq_frames)
 
-    part3(seq_frames)
-    part3(reverse_seq_frames)
+    get_frames_decodon_freq(seq_frames)
+    get_frames_decodon_freq(reverse_seq_frames)
 
-    part4(seq_codons, show_table = True)
-    part5(seq_decodons, show_table = True)
+    get_total_codon_freq(seq_codons, show_table = True)
+    get_total_decodon_freq(seq_decodons, show_table = True)
 
 if __name__ == "__main__":
     main()

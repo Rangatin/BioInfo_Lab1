@@ -5,7 +5,6 @@ def get_blueprint():
         'seq' : [],
         'codons': [],
         'start_stop_p' : [],
-        # 'long_frag' : [],
         'codon_freq' : get_all_possible_codons(),
         'decodon_freq' : get_all_possible_decodons(),
     }
@@ -25,7 +24,6 @@ reverse_seq_frames = {
 }
 
 
-
 seq_codons = {
     'frame1' : get_all_possible_codons(),
     'frame2' : get_all_possible_codons(),
@@ -43,4 +41,3 @@ seq_decodons = {
     'reverse_frame2' : get_all_possible_decodons(),
     'reverse_frame3' : get_all_possible_decodons(),
 }
-
